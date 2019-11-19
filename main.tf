@@ -88,12 +88,6 @@ resource "aws_ssm_parameter" "runner_registration_token" {
   value = "null"
 
   tags = "${local.tags}"
-
-  lifecycle {
-    ignore_changes = [
-      "value",
-    ]
-  }
 }
 
 data "template_file" "user_data" {
