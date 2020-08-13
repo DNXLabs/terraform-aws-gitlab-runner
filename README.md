@@ -1,5 +1,12 @@
 # terraform-aws-gitlab-runner
 
+Terraform-aws-gitlab-runner is a Terraform module for AWS GitLab Runners on Spot Instances. 
+
+This module requires:
+ - Terraform Version >=0.12.20
+
+ 
+
 [![Lint Status](https://github.com/DNXLabs/terraform-aws-gitlab-runner/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-gitlab-runner/actions)
 [![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-gitlab-runner)](https://github.com/DNXLabs/terraform-aws-gitlab-runner/blob/master/LICENSE)
 [![Build Status](https://travis-ci.com/npalm/terraform-aws-gitlab-runner.svg?branch=master)](https://travis-ci.com/npalm/terraform-aws-gitlab-runner) [![Gitter](https://badges.gitter.im/terraform-aws-gitlab-runner/Lobby.svg)](https://gitter.im/terraform-aws-gitlab-runner/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
