@@ -7,9 +7,6 @@ This module requires:
 
  
 
-[![Lint Status](https://github.com/DNXLabs/terraform-aws-gitlab-runner/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-gitlab-runner/actions)
-[![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-gitlab-runner)](https://github.com/DNXLabs/terraform-aws-gitlab-runner/blob/master/LICENSE)
-[![Build Status](https://travis-ci.com/npalm/terraform-aws-gitlab-runner.svg?branch=master)](https://travis-ci.com/npalm/terraform-aws-gitlab-runner) [![Gitter](https://badges.gitter.im/terraform-aws-gitlab-runner/Lobby.svg)](https://gitter.im/terraform-aws-gitlab-runner/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ### Terraform module for GitLab auto scaling runners on AWS spot instances
 
@@ -18,6 +15,12 @@ This module requires:
 > "Managed ec2 key support dropped": The module will not longer manage an SSH key pair. The module offers two way to access instances. First via the AWS session manager and second by providing an AWS key pair as parameter.
 
 > "Type changes": The types of variable `runners_volumes_tmpfs`, and `runners_services_volumes_tmpfs` are changed to support the Terraform 12 `templatefile` function. Check the [default example](examples/runner-pre-registered/main.tf) for an usages example.
+
+
+
+[![Lint Status](https://github.com/DNXLabs/terraform-aws-gitlab-runner/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-gitlab-runner/actions)
+[![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-gitlab-runner)](https://github.com/DNXLabs/terraform-aws-gitlab-runner/blob/master/LICENSE)
+[![Build Status](https://travis-ci.com/npalm/terraform-aws-gitlab-runner.svg?branch=master)](https://travis-ci.com/npalm/terraform-aws-gitlab-runner) [![Gitter](https://badges.gitter.im/terraform-aws-gitlab-runner/Lobby.svg)](https://gitter.im/terraform-aws-gitlab-runner/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Terraform versions
 
