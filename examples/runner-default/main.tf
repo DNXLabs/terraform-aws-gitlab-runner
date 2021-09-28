@@ -9,7 +9,7 @@ data "aws_security_group" "default" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "3.0.0"
+  version = "2.33"
 
   name = "vpc-${var.environment}"
   cidr = "10.0.0.0/16"
