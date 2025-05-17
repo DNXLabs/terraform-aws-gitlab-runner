@@ -591,5 +591,5 @@ variable "instance_types" {
 
 variable "architecture" {
   type = string
-  default = "amd64
+  default = "amd64"
 }
