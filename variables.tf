@@ -584,3 +584,7 @@ variable "log_group_name" {
   default     = null
   type        = string
 }
+
+variable "instance_types" {
+  type = list(string)
+}

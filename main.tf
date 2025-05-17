@@ -165,7 +165,7 @@ resource "aws_autoscaling_group" "gitlab_runner_instance" {
         version            = "$Latest"
       }
       dynamim "override" {
-        for_each = toset(var.runner_ami_filter)
+        for_each = toset(var.instance_types)
         content {
           instance_type = override.value
         }
