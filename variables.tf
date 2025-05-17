@@ -584,8 +584,3 @@ variable "log_group_name" {
   default     = null
   type        = string
 }
-
-variable "instance_types_override" {
-  type = list(string)
-  default = ["t3.micro", "t3.small", "t2.micro"]
-}

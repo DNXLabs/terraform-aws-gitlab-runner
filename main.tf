@@ -164,13 +164,12 @@ resource "aws_autoscaling_group" "gitlab_runner_instance" {
         launch_template_id = aws_launch_template.gitlab_runner_instance.id
         version            = "$Latest"
       }
-      dynamic "override" {
-        for_each = toset(var.instance_types_override)
+      dynamim "override" {
+        for_each = toset(var.runner_ami_filter)
         content {
-          instance_type = each.key
+          instance_type = override.value
         }
       }
-
     }
 
     instances_distribution {
