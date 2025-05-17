@@ -42,7 +42,8 @@ locals {
       eip                 = var.enable_eip ? local.template_eip : ""
       logging             = var.enable_cloudwatch_logging ? local.logging_user_data : ""
       gitlab_runner       = local.template_gitlab_runner
-      user_data_trace_log = var.enable_runner_user_data_trace_log
+      user_data_trace_log = var.enable_runner_user_data_trace_log,
+      architecture = var.architecture
   })
 
   template_eip = templatefile("${path.module}/template/eip.tpl", {

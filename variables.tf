@@ -588,3 +588,8 @@ variable "log_group_name" {
 variable "instance_types" {
   type = list(string)
 }
+
+variable "architecture" {
+  type = string
+  default = "amd64
+}

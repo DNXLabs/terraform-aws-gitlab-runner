@@ -17,7 +17,7 @@ for i in {1..7}; do
   yum -y update && break || sleep 60
 done
 
-yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm
+yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_${architecture}/amazon-ssm-agent.rpm
 systemctl restart amazon-ssm-agent
 
 ${logging}
