@@ -185,21 +185,6 @@ resource "aws_autoscaling_group" "gitlab_runner_instance" {
   }
 
   enabled_metrics = var.metrics_autoscaling
-  tags = concat(
-    data.null_data_source.tags.*.outputs,
-    [
-      {
-        "key"                 = "Name"
-        "value"               = local.name_runner_instance
-        "propagate_at_launch" = true
-      },
-    ],
-    [for key in keys(var.agent_tags) : {
-      "key"                 = key,
-      "value"               = lookup(var.agent_tags, key),
-      "propagate_at_launch" = true
-    }]
-  )
 
 }
 
