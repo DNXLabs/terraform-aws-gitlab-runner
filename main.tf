@@ -265,18 +265,18 @@ resource "aws_launch_template" "gitlab_runner_instance" {
 
   user_data = base64encode(local.template_user_data)
 
-  # block_device_mappings {
-  #   dynamic "ebs" {
-  #     for_each = [var.runner_root_block_device]
-  #     content {
-  #       delete_on_termination = lookup(root_block_device.value, "delete_on_termination", true)
-  #       volume_type           = lookup(root_block_device.value, "volume_type", "gp2")
-  #       volume_size           = lookup(root_block_device.value, "volume_size", 8)
-  #       encrypted             = lookup(root_block_device.value, "encrypted", true)
-  #       iops                  = lookup(root_block_device.value, "iops", null)
-  #     }
-  #   }
-  # }
+   block_device_mappings {
+     dynamic "ebs" {
+       for_each = [var.runner_root_block_device]
+       content {
+         delete_on_termination = lookup(root_block_device.value, "delete_on_termination", true)
+         volume_type           = lookup(root_block_device.value, "volume_type", "gp2")
+         volume_size           = lookup(root_block_device.value, "volume_size", 8)
+         encrypted             = lookup(root_block_device.value, "encrypted", true)
+         iops                  = lookup(root_block_device.value, "iops", null)
+       }
+     }
+   }
 
   network_interfaces {
     associate_public_ip_address = false == var.runners_use_private_address
