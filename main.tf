@@ -269,11 +269,11 @@ resource "aws_launch_template" "gitlab_runner_instance" {
      dynamic "ebs" {
        for_each = [var.runner_root_block_device]
        content {
-         delete_on_termination = lookup(root_block_device.value, "delete_on_termination", true)
-         volume_type           = lookup(root_block_device.value, "volume_type", "gp2")
-         volume_size           = lookup(root_block_device.value, "volume_size", 8)
-         encrypted             = lookup(root_block_device.value, "encrypted", true)
-         iops                  = lookup(root_block_device.value, "iops", null)
+         delete_on_termination = lookup(ebs.value, "delete_on_termination", true)
+         volume_type           = lookup(ebs.value, "volume_type", "gp2")
+         volume_size           = lookup(ebs.value, "volume_size", 8)
+         encrypted             = lookup(ebs.value, "encrypted", true)
+         iops                  = lookup(ebs.value, "iops", null)
        }
      }
    }
